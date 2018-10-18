@@ -77,30 +77,6 @@ void Command::clear() {
 	_count = 0;
 }
 
-void Command::print() {
-	printf("\n\n");
-	printf("              COMMAND TABLE                \n");
-	printf("\n");
-	printf("  #   Simple Commands\n");
-	printf("  --- ----------------------------------------------------------\n");
-
-	int i = 0;
-	// iterate over the simple commands and print them nicely
-	for ( auto & simpleCommand : _simpleCommands ) {
-		printf("  %-3d ", i++ );
-		simpleCommand->print();
-	}
-
-	printf( "\n\n" );
-	printf( "  Output       Input        Error        Background\n" );
-	printf( "  ------------ ------------ ------------ ------------\n" );
-	printf( "  %-12s %-12s %-12s %-12s\n",
-			_outFile?_outFile->c_str():"default",
-			_inFile?_inFile->c_str():"default",
-			_errFile?_errFile->c_str():"default",
-			_background?"YES":"NO");
-	printf( "\n\n" );
-}
 
 extern char **environ;
 

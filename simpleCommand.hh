@@ -8,7 +8,6 @@ struct SimpleCommand {
 
   // Simple command is simply a vector of strings
   std::vector<std::string *> _arguments;
-	//char* const* _arguments;
 
   SimpleCommand();
   ~SimpleCommand();
